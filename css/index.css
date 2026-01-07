@@ -206,7 +206,12 @@ body.dark .github-corner {
 .page-a {
   width: 400px;
   height: calc(11.7 * 400px / 8.3); /* A4 Ratio */
-  background: #fff;
+
+  background-image: url('../images/file page.jpg'); /* Apni image ka sahi path yahan dalein */
+  background-size: cover;                         /* Image ko poore page par fit karne ke liye */
+  background-position: center;
+  background-repeat: no-repeat;
+  
   border: 1px solid var(--elevation-background);
   font-size: 10pt;
   position: relative;
@@ -223,8 +228,8 @@ body.dark .github-corner {
   width: 100%;
 }
 .page-a.lines .paper-content {
-  background-image: linear-gradient(#999 0.05em, transparent 0.1em);
-  background-color: unset !important;
+  background-image: none !important; 
+  background-color: transparent !important;
   background-size: 100% 1.5em;
 }
 
@@ -236,7 +241,7 @@ body.dark .github-corner {
 
 .left-margin,
 .top-margin {
-  display: none;
+  display: none !important;
 }
 
 .margined .top-margin {
